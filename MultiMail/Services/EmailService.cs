@@ -1,7 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
@@ -16,7 +13,7 @@ namespace MultiMail.Services
             _configuration = configuration;
         }
 
-        public async Task SendEmail(string email,string subject, string message)
+        public async Task SendEmail(string email, string subject, string message)
         {
             using (var client = new SmtpClient())
             {
